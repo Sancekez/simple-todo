@@ -102,6 +102,11 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media screen and (max-width: 720px) {
+			flex-direction: column;
+			justify-content: center;
+			display: block;
+		}
 		a {
 			display: flex;
 			align-items: center;
@@ -117,7 +122,15 @@ body {
 				box-shadow: 0 2px 10px $grey;
 				background-color: rgb(217, 221, 0);
 			}
-			
+			@media screen and (max-width: 720px) {
+				flex-direction: column;
+				margin-bottom: 20px;
+				flex-wrap: nowrap;
+				width: 100%;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 }
